@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-content: center;
+    background-image:url("flights.jpg");
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    background-size: 100% 100%;
+    font-family: "Arimo";
+}
+
+
+div.check
+{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    padding: 0px 10px 0px 10px;
+    transform: translate(-50%, -55%);
+    background-color: white;
+    opacity: 80%;
+    width: 300px;
+    height: 550px;
+    font-size: 1.2em;
+}
+
+
+.check p:first-child {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #2f002c;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.check .type
+{
+    position: relative;
+}
+
+.check .type .fields {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #2f002c;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #000000;
+    outline: none;
+    background: transparent;
+}
+
+.check .type label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #2f002c;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.check .type input:focus ~ label,
+.check .type input:valid ~ label{
+    top: -20px;
+    left: 0;
+    color: #2f002c;
+    font-size: 0.7em;
+}
+
+
+p.selection
+{
+    position: absolute;
+    width: 100%;
+    top: 85%;
+    left: 6%;
+}
+
+div input[type=submit]
+{
+    position: absolute;
+    bottom: 15%;
+    left: 30%;
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 10px 28px;
+    text-decoration: none;
+    border-radius: 20%;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 0.8em;
+}
+
+.notValid{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #2f002c;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #ff0000;
+    outline: none;
+    background: transparent;
+}
+
+.check .type input.notValid:focus~label,
+.check .type input.notValid:valid~label{
+    top: -20px;
+    left: 0;
+    color: #2f002c;
+    font-size: 0.7em;
+}
+
+div.type span{
+    color: red;
+    margin-left: 5px;
+}
+
+div.errors{
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    opacity: 80%;
+    width: 100%;
+    height: 50px;
+}
+
+.error{
+    font-size: 1em;
+    color: red;
+}
+
+#ProgressBar{
+    width: 100%;
+    background-color: #ddd;
+    max-width:300px;
+}
+
+#bar{
+    width: 0%;
+    height: 10px;
+    background-color: #4CAF50;
+    max-width:300px;
+}
+
+#alert {
+    font-family: inherit;
+    font-weight:bold;
+    text-align:center;
+}
+
+.hidden{
+    display: none;
+}

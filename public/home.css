@@ -1,0 +1,596 @@
+@import url('https://fonts.googleapis.com/css2?family=Anuphan&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anuphan&family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+
+body
+{
+    margin: 0;
+    width: 100%;
+}
+
+.material-symbols-outlined {
+margin-left: 10px;
+margin-right: 10px;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 100000,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.material-symbols-outlined#plane{
+    display: none;
+    margin-left: 10px;
+    margin-right: 10px;
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 100000,
+      'GRAD' 0,
+      'opsz' 48
+    }
+
+div#menu{
+    display: flex;
+    position: absolute;
+    top: 20%;
+    left: 0.3%;
+    margin: 0;  
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50px;
+    width: 50px;
+}
+
+div#menu:hover{
+    cursor: pointer;
+}
+
+div#menu div{
+    width: 50px;
+    height: 10px;
+    margin: 0;
+    background-color: white;
+}
+
+div#titleDiv
+{
+    position: relative;
+    font-family: "Noto Sans JP";
+    font-size: 30px;
+    background-color: #2a4747;
+    color: #fff;
+}
+
+div#titleDiv span{
+    position: absolute;
+    top: 50%;
+}
+
+#titleDiv h1
+{
+    display: inline;
+    margin-left: 70px;
+}
+
+div#animated-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('ezgif.com-crop.gif');
+    background-size: cover;
+    height: 500px;
+}
+
+#container {
+    width: 550px;
+    margin: 0 auto;
+}
+
+form#my-form{
+    padding: 20px;
+    background-color: #f1f1f1;
+    opacity: 0.8;
+    border-radius: 5px;
+    font-family: "Anuphan";
+    font-size: 1em;
+}
+
+div.type {
+    position:relative;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+div.type label {
+    width: 80px;
+}
+    
+#formTextPartenza,
+#formTextDestinazione,
+.formNum,
+#formSel {
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+  
+#formTextPartenza,
+#formTextDestinazione,
+.formNum{
+    color: #999;
+}
+
+div#form-part label{
+    position: absolute;
+    bottom: 100%;
+}
+
+div#form-dest label{
+    position: absolute;
+    bottom: 100%;
+}
+
+div#form-departure-date label{
+    position: absolute;
+    bottom: 100%;
+}
+
+div#form-return-date label{
+    position: absolute;
+    bottom: 100%;
+}
+
+div#form-passengers label{
+    position: absolute;
+    bottom: 100%;
+}
+
+div#form-class-travel label{
+    position: absolute;
+    bottom: 100%;
+}
+
+input[type=date]{
+    width: 175px;
+}
+
+div#searchFlight
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 40px;
+    background-color:#2a4747;
+    border: solid 1.5px black;
+    color: #fff;
+    border-radius: 20%;
+    box-shadow: 0 2px #999;
+    font-family: 'Dongle', sans-serif;
+    font-size: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+div#searchFlight:hover
+{
+    background-color: black;
+    color: #968e85;
+    cursor: pointer;
+}
+
+
+div#resultPart li:hover
+{
+    background-color: aliceblue;
+    cursor: pointer;
+}
+
+div#resultPart ul
+{
+    list-style-type: none;
+    text-align: center;
+}
+
+div#resultPart
+{
+    position: absolute;
+    top: 100%;
+    width: 134px;
+    color: #000000;
+    background-color: white;
+    border: solid 2px gray;
+    font-family: inherit;
+    padding-right: 40px;
+    z-index: 2;
+}
+
+div#resultDest
+{
+    position: absolute;
+    top: 100%;
+    width: 134px;
+    color: #000000;
+    background-color: white;
+    border: solid 2px gray;
+    font-family: inherit;
+    padding-right: 40px;
+    z-index: 2;
+}
+
+div#resultDest li:hover
+{
+    background-color: aliceblue;
+    cursor: pointer;
+}
+
+div#resultDest ul
+{
+    list-style-type: none;
+    text-align: center;
+}
+
+div#flights
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+div.flightResult
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 70%;
+    min-height: 30%;
+    border: solid 2px #968e85;
+    background-color: #c1d7ae;
+    margin-top: 20px;
+    border-radius: 3%;
+    font-family: "Noto Sans JP";
+}
+
+div.flightResult div
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+div.flightResult p
+{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 1.5em;
+}
+
+section#modalBenvenuto{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+
+    background-color: rgba(0,0,0,0.7);
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#modalBenvenuto.hidden{
+    display: none;
+}
+
+div.hello
+{
+    position: relative;
+    width: 600px;
+    height: 350px;
+    font-size: 2em;
+    background-color: white;
+    font-family: "Noto Sans JP";
+}
+
+
+div.hello h1{
+    position: absolute;
+    margin:0;
+    top: 60%;
+    left: 15%;
+}
+
+div.hello img
+{
+    position: absolute;
+    top: 2%;
+    left: 34%;
+    width: 200px;
+    height: 200px;
+}
+
+.hidden{
+    display: none;
+}
+
+.shadow{
+    background-color: rgba(0,0,0,0.7);
+}
+
+div#menuSelector{
+    display: none;
+    position: absolute;
+    height: 100vh;
+    width: 15%;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.8s; 
+    z-index: 1;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+div#menuSelector a{
+    color: black;
+    text-decoration: none;
+    color: #818181;
+    transition: 0.3s;
+}
+
+div#menuSelector a:hover{
+    color: #f1f1f1;
+}
+
+div#menuSelector div a{
+    text-align: center;
+    text-decoration: none !important;
+    color: black;
+}
+
+div#menuSelector div#close{
+    display: flex;
+    position: absolute;
+    bottom: 95%;
+    width: 100%;
+    justify-content: end;
+}
+
+div#menuSelector div#close span{
+    color: white;
+    cursor: pointer;
+}
+
+  .flight-result {
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .flight-info {
+    flex-grow: 1;
+  }
+  
+  .flight-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  input[type=submit]{
+    padding: 10px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+
+  div#no-content{
+    font-size: 3em;
+    font-family: inherit;
+  }
+
+@media screen and (max-width:370px){
+    div.type{
+        font-size: 0.8em;
+        width: 335px;
+    }
+
+    input[type=date]{
+        width: 80px;
+    }
+
+    div#form-class-travel{
+        width: 160px;
+    }
+
+    div#animated-container{
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}   
+
+@media screen and (max-width:400px){
+
+    div.hello{
+        position: relative;
+        align-items: center;
+        font-size: 1em;
+        width: 300px;
+        height: 175px;
+    }
+
+    
+    div.hello img
+    {
+        position: absolute;
+        top: 2%;
+        left: 34%;
+        width: 100px;
+        height: 100px;
+    }
+
+    div.type{
+        display: flex;
+        flex-direction: column;
+    }
+
+    div.type input{
+        margin-bottom: 10px;
+    }
+
+    div.type select{
+        margin-bottom: 10px;
+    }
+
+    div#form-part label{
+        position: absolute;
+        bottom: 70%;
+        left: 0%;
+    }
+    
+    div#form-dest label{
+        position: absolute;
+        bottom: 20%;
+        left: 0%;
+    }
+    
+    div#form-departure-date label{
+        position: absolute;
+        bottom: 70%;
+        left: 0%;
+    }
+    
+    div#form-return-date label{
+        position: absolute;
+        bottom: 20%;
+        left: 0%;
+    }
+    
+    div#form-passengers label{
+        position: absolute;
+        bottom: 70%;
+        left: 0%;
+    }
+    
+    div#form-class-travel label{
+        position: absolute;
+        bottom: 20%;
+        left: 0%;
+    }
+
+    div#resultPart{
+        position: absolute;
+        top: 33%;
+    }
+
+    div#resultDest{
+        position: absolute;
+        top: 85%;
+    }
+
+    div#animated-container{
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+
+@media screen and (max-width:800px){
+    div.hello{
+        position: relative;
+        align-items: center;
+        font-size: 1em;
+        width: 300px;
+        height: 175px;
+    }
+
+    
+    div.hello img
+    {
+        position: absolute;
+        top: 2%;
+        left: 34%;
+        width: 100px;
+        height: 100px;
+    }
+
+    div#menuSelector{
+        width: 30%;
+    }
+
+    div#animated-container{
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+
+@media screen and (max-width:480px) {
+    div.hello{
+        position: relative;
+        align-items: center;
+        font-size: 1em;
+        width: 300px;
+        height: 175px;
+    }
+
+    
+    div.hello img
+    {
+        position: absolute;
+        top: 2%;
+        left: 34%;
+        width: 100px;
+        height: 100px;
+    }
+    
+    div#menuSelector{
+        width: 100%;
+    }
+
+    div#titleDiv{
+        position: relative;
+        font-size: 0.7em;
+    }
+
+    div#titleDiv h1{
+        margin-left: 35px;
+    }
+
+    div#menu{
+        position: absolute;
+        height: 25px;
+        width: 25px;
+        bottom: 10%;
+    }
+
+    div#menu div{
+        width: 25px;
+        height: 5px;
+    }
+
+    div#animated-container{
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}

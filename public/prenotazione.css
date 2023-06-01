@@ -1,0 +1,68 @@
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+  
+.modal-content{
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 970px;
+    height: 300px;
+    text-align: center;
+}
+
+.modal-content h1{
+    font-size: 3.5em;
+}
+
+.modal-content div{
+    display: flex;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+div.add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 42px;
+    font-size: 1.2em;
+    background-color: rgb(75, 214, 32);
+    color: rgb(233, 231, 231);
+}
+
+div.without{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 42px;
+    font-size: 1.2em;
+    background-color: rgb(211, 34, 34);
+    color: rgb(233, 231, 231);
+}
+
+div.add:hover{
+    background-color: rgb(47, 157, 30);
+    cursor: pointer;
+    color: rgb(184, 184, 184);
+}
+
+div.without:hover{
+    background-color: rgb(157, 30, 30);
+    cursor: pointer;
+    color: rgb(184, 184, 184);
+}
